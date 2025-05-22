@@ -4,11 +4,14 @@ name: events
 
 # Controls when the workflow will run
 on:
+   issues:
+    types: [opened,closed,reopened]
+  
   # Triggers the workflow on push or pull request events but only for the "main" branch
   #push:
     #branches: [ "main" ]
-   issues:
-    types:[opened,closed,reopened]
+   #issues:
+    #types:[opened,closed,reopened]
   #pull_request:
    # branches: [ "main" ]
 
