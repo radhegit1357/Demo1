@@ -12,7 +12,7 @@ jobs:
    - name: checkout code
      uses: actions/checkout@v4
    - name: building project
-     run: echo "building projecti running on ${{matrix.os}}"" > build.txt
+     run: echo "building projecti running on ${{matrix.os}}" > build.txt
 
    - name: build artifacts
      uses: actions/upload-artifact@v4
