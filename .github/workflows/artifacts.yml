@@ -22,6 +22,7 @@ jobs:
        uses: actions/download-artifact@v4
        with:
         name: build-output
+        with: build.txt
         
      - name: deploy project
        run: cat build.txt
