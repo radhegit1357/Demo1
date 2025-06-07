@@ -7,20 +7,20 @@ jobs:
    runs-on: ubuntu-latest
    steps:
      - name: checkout code
-       uses: action/checkout@v4
+       uses: actions/checkout@v4
      - name: run build
        run: echo " Running build"
   test:
     runs-on: ubuntu-latest
     steps:
      - name: checkout code
-       uses: action/checkout@v4
+       uses: actions/checkout@v4
      - name: run build
        run: echo " Running test"      
   deploy:
      runs-on: ubuntu-latest
      steps:
        - name: checkout code
-         uses: action/checkout@v4
+         uses: actions/checkout@v4
        - name: run build
          run: echo " Running depoy"   
