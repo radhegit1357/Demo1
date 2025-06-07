@@ -1,0 +1,29 @@
+name: work_with_artifacts
+on: [push]
+
+jobs:
+ build:
+  runs-on: ubuntu-latest
+  steps:
+   - name: checkout code
+     uses: actions/checkout@v4
+   - name: building project
+     run: echo "building project" > build.txt
+
+   - name: build artifacts
+     uses: actions/upload-artifact@v3
+     with: 
+        name: build-output
+        path: build.txt
+ deploy:
+    runs-on: ubuntu-latest
+    steps:
+     - name: Download artifacts
+       uses: actions/download-artifact@v3
+       with:
+        name: build-output
+        
+     - name: deploy project
+       run: cat build.txt
+ 
+  
