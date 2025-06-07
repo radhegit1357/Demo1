@@ -17,7 +17,7 @@ jobs:
    - name: build artifacts
      uses: actions/upload-artifact@v4
      with: 
-        name: build-output
+        name: build-output1
         path: build.txt
  deploy:
     runs-on: ubuntu-latest
@@ -25,7 +25,7 @@ jobs:
      - name: Download artifacts
        uses: actions/download-artifact@v4
        with:
-        name: build-output
+        name: build-output1
         with: build.txt
         
      - name: deploy project
