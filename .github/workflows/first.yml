@@ -1,8 +1,7 @@
 name: firstjob
-on: push
-     branches:[main]
-    
-    workflow_dispath
+on: 
+ push:
+  branches: [main]
 jobs:
   build:
    runs-on: ubuntu-latest
