@@ -1,0 +1,27 @@
+name: test the protection of workflow
+on:
+   workflow_dispatch:
+jobs:
+  build:
+   runs-on: ubuntu-latest
+   steps:
+    - name: checkout code
+      uses: actions/checkout@v2
+    - name: Run build
+      run: echo " Running build"
+  test:
+   needs: build
+   runs-on: ubuntu-latest
+   steps:
+    - name: checkout code
+      uses: actions/checkout@v2
+    - name: Run build
+      run: echo " Running test"
+  deploy:
+   needs: test
+   runs-on: ubuntu-latest
+   steps:
+    - name: checkout code
+      uses: actions/checkout@v2
+    - name: Run build
+      run: echo " Running deploy"
