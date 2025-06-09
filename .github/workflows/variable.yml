@@ -1,0 +1,19 @@
+name: test the protection of workflow
+on:
+   workflow_dispatch:
+
+env:
+ Day_of_week: Monday
+
+jobs:
+  build:
+   runs-on: ubuntu-latest
+   steps:
+    - name: F=Greeting Hello
+      run: |
+          echo "Say hello with me"
+          echo "Gretting ${{env.First_Name}}, Today is ${{env.Days_of_week}}"
+          echo "Event triggered by ${{github.event_name}}"
+      env:
+        First_name: Radha
+    
