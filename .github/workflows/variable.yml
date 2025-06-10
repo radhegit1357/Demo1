@@ -3,7 +3,7 @@ on:
    workflow_dispatch:
 
 env:
- Day_of_week: Monday
+ Day_of_week: Tuesday
 
 jobs:
   build:
@@ -12,8 +12,8 @@ jobs:
     - name: F=Greeting Hello
       run: |
           echo "Say hello with me"
-          echo "Gretting ${{env.First_Name}}, Today is ${{env.Days_of_week}}"
-          echo "Event triggered by ${{github.event_name}}"
+          echo "Gretting Today is ${{env.Days_of_week}}"
+          echo "Event triggered by"
       env:
         First_name: Radha
     
